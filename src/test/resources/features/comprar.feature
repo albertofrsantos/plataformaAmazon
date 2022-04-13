@@ -1,6 +1,6 @@
 #language: pt
 
-@AllScenarios
+@AllScenarios @Test
 Funcionalidade: Efetuar uma compra
 
   Cenario: Efetuar uma Compra
