@@ -2,7 +2,7 @@ name: Testes Regressivos
 
 on:
   push:
-    branches: [ dev ]
+    branches: [ pipeline ]
   pull_request:
     branches: [ dev ]
 
