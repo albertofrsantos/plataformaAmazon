@@ -1,9 +1,7 @@
 package steps;
 
-import cucumber.api.PendingException;
 import cucumber.api.java.pt.E;
 import cucumber.api.java.pt.Entao;
-import cucumber.api.java.pt.Então;
 import cucumber.api.java.pt.Quando;
 import org.junit.Assert;
 import org.openqa.selenium.By;
@@ -21,7 +19,7 @@ public class CompraSteps extends RunCucumberTest {
         Assert.assertEquals(telaCompra,resultado_Atual);
     }
 
-    @Então("^apresenta a mensagem \"([^\"]*)\"$")
+    @Entao("^apresenta a mensagem \"([^\"]*)\"$")
     public void apresentaAMensagem(String mensagem) {
         System.out.println(mensagem);
     }
@@ -47,7 +45,7 @@ public class CompraSteps extends RunCucumberTest {
         comprasPage.clicarAdicionarCarrinho();
     }
 
-    @Então("^fecho o pedido$")
+    @Entao("^fecho o pedido$")
     public void fechoOPedido() {
         comprasPage.clicarFecharPedido();
     }
