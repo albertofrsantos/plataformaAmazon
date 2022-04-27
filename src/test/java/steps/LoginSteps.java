@@ -1,22 +1,20 @@
 package steps;
 
-import cucumber.api.PendingException;
 import cucumber.api.java.es.Dado;
 import cucumber.api.java.pt.E;
-import cucumber.api.java.pt.Então;
-import cucumber.api.java.pt.Quando;
+import cucumber.api.java.pt.Entao;
 import pages.LoginPage;
 
 public class LoginSteps {
 
     LoginPage loginPage = new LoginPage();
 
-    @Dado("^que estou logando na aplicação da amazon$")
-    public void queEstouLogandoNaAplicaçãoDaAmazon() {
+    @Dado("^que estou logando na aplicacao da amazon$")
+    public void queEstouLogandoNaAplicacaoDaAmazon() {
         loginPage.acessarAplicacao();
     }
 
-    @E("^clico no faça seu login$")
+    @E("^clico no faca seu login$")
     public void clicoNoFacaSeuLogin() {
         loginPage.clicarButtonFacaSeuLogin();
     }
@@ -29,7 +27,7 @@ public class LoginSteps {
         loginPage.clicarButtonFazerlogin();
     }
 
-    @Então("^apresenta a mensagem acesso \"([^\"]*)\"$")
+    @Entao("^apresenta a mensagem acesso \"([^\"]*)\"$")
     public void apresentaAMensagemAcesso(String senhaInvalida) {
         loginPage.senhaInvalida(senhaInvalida);
     }

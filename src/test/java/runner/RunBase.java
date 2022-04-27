@@ -2,6 +2,7 @@ package runner;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class RunBase {
@@ -26,7 +27,9 @@ public class RunBase {
                 driver = new FirefoxDriver();
                 break;
             case CHROME:
-                driver = new ChromeDriver();
+                ChromeOptions ChromeOptions = new ChromeOptions();
+                ChromeOptions.addArguments("--headless", "window-size=1024,768", "--no-sandbox");
+                driver = new ChromeDriver(ChromeOptions);
                 break;
             default:
                 throw new IllegalArgumentException("Passe o navegador valido");
