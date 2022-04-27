@@ -40,5 +40,5 @@ jobs:
       with:
         name: Run Tests
 
-        path: "**/surefire-reports/TEST-*.xml"
-          reporter: java-junit
+     path: "**/surefire-reports/TEST-*.xml"
+      reporter: java-junit
