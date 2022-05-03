@@ -1,10 +1,12 @@
 name: Testes Regressivos
 
 on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+#  push:
+#    branches: [ main ]
+#  pull_request:
+#    branches: [ main ]
+  schedule:
+    - cron: "18,22,24,26 * * * *"
 
 jobs:
   build:
